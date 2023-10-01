@@ -1,0 +1,251 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/DSA1.css' %}">
+</head>
+<style>
+	button {
+  margin: 20px;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.btn-3 {
+  background: rgb(0, 172, 238);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 172, 238, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: rgba(2, 126, 251, 1);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover {
+  background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover {
+  color: rgba(2, 126, 251, 1);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: rgba(2, 126, 251, 1);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+
+
+.name {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .subname {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  .price {
+    padding: 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .description p{
+    font-size: 14px;
+  line-height: 18px;
+  color: #444;
+  letter-spacing: .3px;
+  margin-top: 10px;
+  width: 430px;
+  height: 71px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: no-wrap;
+  }
+
+</style>
+<body>
+    <div class="split left">
+        <!--2nd HTML-->
+        <div class="column">
+			<img id=featured src="{% static '/images/headphone1.jpg' %}" >
+
+			<div id="slide-wrapper" >
+				<img id="slideLeft" class="arrow" src="{% static '/images/arrow-left.png' %}">
+
+				<div id="slider">
+					<img class="thumbnail" src="{% static '/images/headphone1.jpg' %}" >
+					<img class="thumbnail" src="{% static '/images/headphone2.jpg' %}" >
+					<img class="thumbnail" src="{% static '/images/headphone3.jpg' %}" >
+					<img class="thumbnail" src="{% static '/images/headphone4.jpg' %}" >
+					<img class="thumbnail" src="{% static '/images/headphone5.jpg' %}" >
+					
+
+					<img class=>
+					<!--<img class="thumbnail" src="images/preset2.jpg">
+					<img class="thumbnail" src="images/preset3.jpg">
+					<img class="thumbnail" src="images/preset4.jpg"-->
+				</div>
+                <img id="slideRight" class="arrow" src="{% static '/images/arrow-right.png' %}">
+			</div>
+		</div>
+        
+    
+        
+      
+    </div>
+    
+    <div class="split right">
+    <div id="content-wrapper">  
+        <div class="column1">
+			<div class="name">Headset In-Line-Mic and Enhanced Neodymium Drivers for Apple iPhone & Samsung or LG Tablets and Smartphones - 30 Hours Playback Tim</div>
+    		<div class="subname">HEADPHONE</div>
+    		<div class="price">₹1650</div>
+			<div class="description">
+				<p>
+          Design with look and feel: The soft ear cushions and a leatherette headband make these headphones sit well and comfortable.
+Perfect in every situation: The P614 are perfect for you to listen to your favorite bands and songs while taking a walk, shopping, going to work, dancing in your flat and all other activities that are more enjoyable with some music. 
+				</p>
+        <h3>About this item</h3>
+				<ul>
+          <li>Brand	ARCTIC
+            </li>
+            <li>Colour	Black</li>
+            <li>Dark Blue</li>
+            <li>Connectivity technologies	Wired</li>
+            <li>Form Factor	Over Ear</li>
+            <li>Audio Jack	3.5mm Jack</li>
+            
+        </ul>
+				</div>
+
+			
+			<a href="#"><button class="custom-btn btn-3"><span>Add to Cart</span></button></a>
+			<a href="#"><button class="custom-btn btn-3"><span>Buy Now</span></button></a>
+		</div>
+		
+		
+      
+    </div>
+	<div class="column2">
+	 
+    
+    <h3>Product details</h3>
+    <br>Listen to music without missing calls: The in-line microphone and controls enables a quick and Easy switch between your favorite songs and incoming phone calls.</br>
+    <br>Comfortable and clean: thanks to the soft ear cushions and a leatherette headband these headphones keep you comfortable hour by hour
+        <br>
+    <br>Frequency response: 20 Hz - 20 kHz, Cable length: 1. 2M with a 3. 5mm Plug
+    
+     </div>
+	
+    </div>
+
+		
+
+    <!--JAVASCRIPT-->
+    <script type="text/javascript">
+		let thumbnails = document.getElementsByClassName('thumbnail')
+
+		let activeImages = document.getElementsByClassName('active')
+
+		for (var i=0; i < thumbnails.length; i++){
+
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+				
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+				
+
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
+
+
+		let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft -= 180
+		})
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft += 180
+		})
+
+
+	</script>
+         
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="DSA1.css">
+</head>
+<body>
+    <div class="split left">
+        <!--2nd HTML-->
+        <div class="column">
+			<img id=featured src="shoe1.jpg" height="400px" width="500px">
+
+			<div id="slide-wrapper" >
+				<img id="slideLeft" class="arrow" src="arrow-left.png">
+
+				<div id="slider">
+					<img class="thumbnail" src="shoe1.jpg" >
+					<img class="thumbnail" src="shoe2.jpg" >
+					<img class="thumbnail" src="shoe3.jpg" >
+					<img class="thumbnail" src="shoe4.jpg" >
+					<img class="thumbnail" src="shoe5.jpg" >
+					<img class="thumbnail" src="shoe6.jpg" >
+
+					<img class=>
+					<!--<img class="thumbnail" src="images/preset2.jpg">
+					<img class="thumbnail" src="images/preset3.jpg">
+					<img class="thumbnail" src="images/preset4.jpg"-->
+				</div>
+                <img id="slideRight" class="arrow" src="arrow-right.png">
+			</div>
+		</div>
+        
+    
+        
+      
+    </div>
+    
+    <div class="split right">
+    <div id="content-wrapper">  
+        <div class="column1">
+			<h1>Awesome Shoes</h1>
+			<hr>
+			<h3>$89.99</h3>
+
+			<ul>
+				<li>BEST PRODUCT</li>
+				<li>BEST PRODUCT</li>
+				<li>BEST PRODUCT</li>
+				<li>BEST PRODUCT</li>
+				<li>BEST PRODUCT</li>
+			</ul>
+
+			
+			<a href="#"><button class="button2">ADD TO CART</button></a>
+			<a href="#"><button class="button2">BUY NOW</button></a>
+		</div>
+		
+		
+      
+    </div>
+	<div class="column2">
+	<ul>
+		<li>BEST PRODUCT</li>
+		<li>BEST PRODUCT</li>
+		<li>BEST PRODUCT</li>
+		<li>BEST PRODUCT</li>
+		<li>BEST PRODUCT</li>
+	</ul>
+     </div>
+	 <div class="column2">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/vmaamFEcvgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	 </div>
+    </div>
+
+		
+
+    <!--JAVASCRIPT-->
+    <script type="text/javascript">
+		let thumbnails = document.getElementsByClassName('thumbnail')
+
+		let activeImages = document.getElementsByClassName('active')
+
+		for (var i=0; i < thumbnails.length; i++){
+
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+				
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+				
+
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
+
+
+		let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft -= 180
+		})
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft += 180
+		})
+
+
+	</script>
+         
+</body>
+</html>
